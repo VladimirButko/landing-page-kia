@@ -1,0 +1,1551 @@
+@mixin burger() {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 1px;
+    background-color: rgb(255, 255, 255);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+body{
+    box-sizing: border-box;
+    main{
+        .info{
+            position: relative;
+            max-width: 1600px;
+            display: flex;
+            &-left{
+                width: 50%;
+                height: 770px;
+                background-color: rgb(163, 6, 6); 
+                &-header{
+                    height: 70px;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    .logo-avtoholding{
+                        display: inline-block;
+                        width: 130px;
+                        height: 50px;
+                        background: url(../icon/logo_avtoholding.png);
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        margin-right: 121px;
+                    }
+                    .address{
+                        position: relative;
+                        font-size: 14px;
+                        font-family: "KIAM";
+                        color: rgb(255, 255, 255);
+                        line-height: 1.143; 
+                        margin-right: 30px;
+                        padding-top: 10px;
+                        &::before{
+                            position: absolute;
+                            content: "";
+                            width: 26px;
+                            height: 26px;
+                            background: url(../icon/.png);
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            top: 10px;
+                            left: -30px;
+
+                        }
+                    }
+                    nav{
+                        position: fixed;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 400px;
+                        top: 70px;
+                        right: -100%;
+                        z-index: 888;
+                        background-color: rgba(9, 16, 26, 0.61);
+                        transition: 1.5s all;
+                        a{
+                            font-size: 16px;
+                            font-family: "KIAB";
+                            margin-bottom: 10px;
+                            color: rgb(255, 255, 255);
+                            text-decoration: none;
+                        }
+                        @media (max-width: 414px) {
+                            &{
+                                &.active{
+                                    right: 0;
+                                }
+                            }
+                        }
+                    }
+                    .burger{
+                        position: relative;
+                        display: none;
+                        justify-content: center;
+                        align-items: center;
+                        width: 44px;
+                        height: 34px;
+                        right: 5px;
+                        border: 1px solid #ddd;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        &::before{
+                            @include burger();
+                            top: 9px;
+                        }
+                        &::after{
+                            @include burger();
+                            bottom: 9px;
+                        }
+                        &-line{
+                            width: 22px;
+                            height: 1px;
+                            background-color:rgb(255, 255, 255);
+                        }
+                        &.active{
+                            &::before{
+                                transform: rotate(-45deg);
+                                transition: 0.5s all;
+                                width: 25px;
+                                top: 17px;
+                            }
+                            &::after{
+                                transform: rotate(45deg);
+                                transition: 0.5s all;
+                                width: 25px;
+                                bottom: 15px;
+                            }
+                            .burger-line{
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+                &-box{
+                    position: absolute;
+                    width: 470px;
+                    top: 200px;
+                    margin: 0 auto;
+                    left: 15%;
+                    z-index: 1;
+                    p{
+                        font-size: 30px;
+                        font-family: "KIAB";
+                        color: rgb(255, 255, 255);
+                        line-height: 1.5;
+                        text-align: left;
+                        top: 227.8px;
+                        z-index: 62;  
+                        span{
+                            font-size: 40px;
+                            text-transform: uppercase;
+                        }
+                    }
+                    button{
+                        width: 282px;
+                        height: 62px;  
+                        font-size: 18px;
+                        font-family: "KIAB";
+                        color: rgb(163, 6, 6);
+                        background-color: rgb(255, 255, 255);
+                        text-transform: uppercase;
+                        line-height: 3.333;
+                        text-align: center;
+                        margin-top: 40px;
+                        outline: none;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: rgb(163, 6, 6);
+                            color: rgb(255, 255, 255);
+                        }
+                    }
+                }
+                &-car{
+                    position: absolute;
+                    top: 68%;
+                    left: 15%;
+                    h2{
+                        font-size: 24px;
+                        font-family: "KIAB";
+                        color: rgb(254, 254, 254);
+                        line-height: 1.5;
+                    }
+                    &-box{
+                        width: 380px;
+                        padding-top: 40px;
+                        &-container{
+                            display: flex;
+                            justify-content: space-between;
+                            ul{
+                                li{
+                                    list-style: none;
+                                    a{
+                                        font-size: 16px;
+                                        font-family: "KIAM";
+                                        color: rgb(255, 255, 255);
+                                        line-height: 1.875;
+                                        text-align: left;  
+                                        text-decoration: none; 
+                                        &:hover{
+                                            color: #ca7777;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            &-right{
+                width: 50%;
+                height: 770px;
+                background-color: rgb(255, 255, 255);
+                &-header{
+                    height: 70px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    button{
+                        background-color: rgb(163, 6, 6);
+                        width: 219px;
+                        height: 54px;   
+                        font-size: 16px;
+                        font-family: "KIAB";
+                        font-weight: 600;
+                        color: rgb(255, 255, 255);
+                        text-transform: uppercase;
+                        line-height: 3.75;
+                        text-align: center;
+                        outline: none;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: rgb(255, 255, 255);
+                            color: #3d3d3d;
+                        }
+                    }
+                    .logo-kia{
+                        display: inline-block;
+                        width: 130px;
+                        height: 50px;
+                        background: url(../icon/logo_kia.png);
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                    }
+                }
+                &-discount{
+                    padding-top: 68%;
+                    padding-left: 27px;
+                    h1{
+                        font-size: 48px;
+                        font-family: "KIAB";
+                        color: rgb(0, 0, 0);
+                        line-height: 0.75;
+                        text-align: left;    
+                    }
+                    p{
+                        font-size: 20px;
+                        font-family: "KIAB";
+                        line-height: 2;
+                        font-weight: 600;
+                    }
+                    form{
+                        margin-top: 32px;
+                        input{
+                            border-width: 1px;
+                            border-color: rgb(208, 208, 208);
+                            border-style: solid;
+                            background-color: rgb(255, 255, 255);
+                            width: 295px;
+                            height: 47px;
+                            font-size: 16px;
+                            font-family: "KIAM";
+                            color: rgb(147, 147, 147);
+                            line-height: 1.875;
+                            text-align: left; 
+                            padding: 0 0 0 15px;
+                            box-sizing: border-box; 
+                            outline: none;   
+                        }
+                        .sub-discount{
+                                background-color: rgb(163, 6, 6);
+                                height: 50px;
+                                font-size: 16px;
+                                font-family: "KIAM";
+                                color: rgb(255, 255, 255);
+                                text-transform: uppercase;
+                                line-height: 1.875;
+                                text-align: center;
+                                cursor: pointer;
+                                outline: none;
+                        }
+                    }
+                }
+            }
+            &-picture{
+                position: absolute;
+                width: 1037px;
+                height: 420px;
+                background: url(../images/Rectangle.jpg);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                top: 17%;
+                right: 0%;
+            }
+            @media (max-width: 1366px) {
+                &{
+                    &-right{
+                        &-discount{
+                            padding-top: 79%;
+                            p{
+                                font-size: 17px;
+                            }
+                            form{
+                                display: flex;
+                                input{
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 825px;
+                    }
+                }
+            }
+            @media (max-width: 1024px) {
+                &{
+                    &-left{
+                        &-box{
+                            left: 10%;
+                        }
+                        &-car{
+                            left: 10%;
+                        }
+                    }
+                    &-right{
+                        height: auto;
+                        &-discount{
+                            padding-top: 88%;
+                            p{
+                                font-size: 17px;
+                            }
+                            form{
+                                display: flex;
+                                input{
+                                    width: 200px;
+                                }
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 520px;
+                        top: 12%;
+                    }
+                }
+            }
+            @media (max-width: 823px) {
+                &{
+                    &-left{
+                        &-box{
+                            width: 435px;
+                            p{
+                                span{
+                                    font-size: 35px;
+                                }
+                            }
+                            left: 2%;
+                            button{
+                                margin-top: 70px;
+                            }
+                        }
+                        &-car{
+                            left: 2%;
+                            &-box{
+                                &-container{
+                                    justify-content: space-around;
+                                }
+                            }
+                        }
+                    }
+                    &-right{
+                        &-discount{
+                            padding-top: 100%;
+                            padding-left: 15px;
+                            h1{
+                                font-size: 45px;
+                                margin-bottom: 20px;
+                            }
+                            p{
+                                font-size: 14px;
+                            }
+                            form{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                input{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 465px;
+                        top: 10%;
+                    }
+                }
+            }
+            @media (max-width: 812px) {
+                &{
+                    &-left{
+                        &-box{
+                            left: 2%;
+                            button{
+                                margin-top: 70px;
+                            }
+                        }
+                        &-car{
+                            left: 2%;
+                            &-box{
+                                &-container{
+                                    justify-content: space-around;
+                                }
+                            }
+                        }
+                    }
+                    &-right{
+                        &-discount{
+                            padding-top: 100%;
+                            padding-left: 15px;
+                            h1{
+                                font-size: 45px;
+                                margin-bottom: 20px;
+                            }
+                            p{
+                                font-size: 14px;
+                            }
+                            form{
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                input{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 465px;
+                        top: 10%;
+                    }
+                }
+            }
+            @media (max-width: 768px) {
+                &{
+                    &-left{
+                        &-box{
+                            left: 2%;
+                            button{
+                                margin-top: 70px;
+                            }
+                        }
+                        &-car{
+                            left: 2%;
+                            &-box{
+                                &-container{
+                                    justify-content: space-around;
+                                }
+                            }
+                        }
+                    }
+                    &-right{
+                        &-discount{
+                            padding-top: 100%;
+                            padding-left: 15px;
+                            h1{
+                                font-size: 38px;
+                            }
+                            p{
+                                font-size: 18px;
+                            }
+                            form{
+                                display: flex;
+                                input{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 475px;
+                        top: 10%;
+                    }
+                }
+            }
+            @media (max-width: 736px) {
+                &{
+                    &-left{
+                        &-box{
+                            left: 2%;
+                            button{
+                                margin-top: 70px;
+                            }
+                        }
+                        &-car{
+                            left: 2%;
+                            &-box{
+                                width: 360px;
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 395px;
+                        top: 10%;
+                    }
+                }
+            }
+            @media (max-width: 667px) {
+                &{
+                    &-left{
+                        &-box{
+                            width: 365px;
+                            top: 150px;
+                            p{
+                                font-size: 20px;
+                                span{
+                                    font-size: 30px;
+                                }
+                            }
+                            left: 2%;
+                            button{
+                                margin-top: 70px;
+                            }
+                        }
+                        &-car{
+                            top: 60%;
+                            left: 2%;
+                            &-box{
+                                width: 330px;
+                            }
+                        }
+                    }
+                    &-right{
+                        &-discount{
+                            h1{
+                                font-size: 36px;
+                            }
+                            p{
+                                font-size: 11px;
+                            }
+                            form{
+                                input{
+                                    width: 250px;
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 395px;
+                        top: 2%;
+                    }
+                }
+            }
+            @media (max-width: 568px) {
+                &{
+                    &-left{
+                        height: auto;
+                        &-header{
+                            .logo-avtoholding{
+                                margin-right: 40px;
+                            }
+                            .address{
+                                margin-right: 0;
+                            }
+                        }
+                        &-box{
+                            width: 300px;
+                            top: 135px;
+                            p{
+                                span{
+                                    font-size: 25px;
+                                }
+                            }
+                            button{
+                                width: 230px;
+                            }
+                        }
+                        &-car{
+                            top: 54%;
+                            &-box{
+                                width: 268px;
+                                &-container{
+                                    ul{
+                                        li{
+                                            a{
+                                                font-size: 13px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &-right{
+                        height: auto;
+                        &-discount{
+                            h1{
+                                font-size: 31px;
+                            }
+                            p{
+                                font-size: 9px;
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 325px;
+                        top: 0;
+                    }
+                }
+            }
+            @media (max-width: 414px) {
+                &{
+                    flex-direction: column;
+                    &-left{
+                        width: 100%;
+                        height: 770px;
+                        &-header{
+                            .logo-avtoholding{
+                                margin-right: inherit;
+                            }
+                            .address{
+                                margin-right: inherit;
+                            }
+                            .burger{
+                                display: flex;
+                                z-index: 5;
+                            }
+                        }
+                        &-box{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 89%;
+                            top: 300px;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                            p{
+                                text-align: center;
+                                span{
+                                    font-size: 30px;
+                                }
+                            }
+                            button{
+                                margin-top: 50px;
+                            }
+                        }
+                        &-car{
+                            top: 47%;
+                            text-align: center;
+                            left: 0;
+                            &-box{
+                                width: 375px;
+                                padding-top: 10px;
+                                &-container{
+                                    justify-content: space-around;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                    &-right{
+                        width: 100%;
+                        &-discount{
+                            padding-top: 30%;
+                            padding-left: 0;
+                            h1{
+                                font-size: 38px;
+                                text-align: center;
+                                margin-bottom: 15px;
+                            }
+                            p{
+                                text-align: center;
+                                font-size: 13px;
+                            }
+                            form{
+                                display: flex;
+                                flex-direction: column;
+                                input{
+                                    width: 100%;
+                                    box-sizing: border-box;
+                                }
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 100%;
+                        top: 0;
+                    }
+                }
+            }
+            @media (max-width: 411px) {
+                &{
+                    flex-direction: column;
+                    &-left{
+                        width: 100%;
+                        &-box{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 89%;
+                            top: 300px;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                            p{
+                                text-align: center;
+                                span{
+                                    font-size: 30px;
+                                }
+                            }
+                            button{
+                                margin-top: 50px;
+                            }
+                        }
+                        &-car{
+                            top: 47%;
+                            text-align: center;
+                            left: 0;
+                            &-box{
+                                width: 375px;
+                                padding-top: 10px;
+                                &-container{
+                                    justify-content: space-around;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                    &-right{
+                        width: 100%;
+                        &-discount{
+                            padding-top: 30%;
+                            padding-left: 0;
+                            h1{
+                                font-size: 38px;
+                                text-align: center;
+                                margin-bottom: 15px;
+                            }
+                            p{
+                                text-align: center;
+                                font-size: 13px;
+                            }
+                            form{
+                                display: flex;
+                                flex-direction: column;
+                                input{
+                                    width: 100%;
+                                    box-sizing: border-box;
+                                }
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 100%;
+                        top: 0;
+                    }
+                }
+            }
+            @media (max-width: 375px) {
+                &{
+                    flex-direction: column;
+                    &-left{
+                        width: 100%;
+                        &-box{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 98%;
+                            top: 300px;
+                            left: 0;
+                            p{
+                                text-align: center;
+                                span{
+                                    font-size: 30px;
+                                }
+                            }
+                            button{
+                                margin-top: 70px;
+                            }
+                        }
+                        &-car{
+                            top: 47%;
+                            text-align: center;
+                            left: 0;
+                            &-box{
+                                width: 375px;
+                                padding-top: 10px;
+                                &-container{
+                                    justify-content: space-around;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                    &-right{
+                        width: 100%;
+                        &-discount{
+                            padding-top: 30%;
+                            padding-left: 0;
+                            h1{
+                                font-size: 38px;
+                                text-align: center;
+                                margin-bottom: 15px;
+                            }
+                            p{
+                                text-align: center;
+                                font-size: 13px;
+                            }
+                            form{
+                                display: flex;
+                                flex-direction: column;
+                                input{
+                                    width: 100%;
+                                    box-sizing: border-box;
+                                }
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 100%;
+                        top: 0;
+                    }
+                }
+            }
+            @media (max-width: 360px) {
+                &{
+                    flex-direction: column;
+                    &-left{
+                        width: 100%;
+                        &-box{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 100%;
+                            top: 285px;
+                            left: 0;
+                            p{
+                                span{
+                                    font-size: 30px;
+                                }
+                            }
+                            button{
+                                margin-top: 30px;
+                            }
+                        }
+                        &-car{
+                            top: 48%;
+                            text-align: center;
+                            left: 0;
+                            &-box{
+                                width: 360px;
+                                padding-top: 10px;
+                                &-container{
+                                    justify-content: space-around;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                    &-right{
+                        width: 100%;
+                        &-discount{
+                            padding-top: 30%;
+                            padding-left: 0;
+                            h1{
+                                font-size: 38px;
+                                text-align: center;
+                                margin-bottom: 15px;
+                            }
+                            p{
+                                text-align: center;
+                                font-size: 13px;
+                            }
+                            form{
+                                display: flex;
+                                flex-direction: column;
+                                input{
+                                    width: 100%;
+                                    box-sizing: border-box;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 320px) {
+                &{
+                    flex-direction: column;
+                    &-left{
+                        width: 100%;
+                        &-header{
+                            .burger{
+                                display: flex;
+                                width: 30px;
+                                height: 31px;
+                                z-index: 5;
+                            }
+                        }
+                        &-box{
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 100%;
+                            top: 285px;
+                            left: 0;
+                            p{
+                                span{
+                                    font-size: 27px;
+                                }
+                            }
+                            button{
+                                margin-top: 30px;
+                            }
+                        }
+                        &-car{
+                            top: 48%;
+                            text-align: center;
+                            left: 0;
+                            &-box{
+                                width: 320px;
+                                padding-top: 10px;
+                                &-container{
+                                    justify-content: space-around;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                    &-right{
+                        width: 100%;
+                        &-discount{
+                            padding-top: 30%;
+                            padding-left: 0;
+                            h1{
+                                font-size: 28px;
+                                text-align: center;
+                                margin-bottom: 15px;
+                            }
+                            p{
+                                text-align: center;
+                                font-size: 15px;
+                            }
+                            form{
+                                display: flex;
+                                flex-direction: column;
+                                input{
+                                    width: 100%;
+                                    box-sizing: border-box;
+                                }
+                            }
+                        }
+                    }
+                    &-picture{
+                        width: 100%;
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+    section{
+        .car{
+            &-box{
+                display: flex;
+                justify-content: space-around;
+                &-rio{
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 50%;
+                    &-container{
+                        margin-top: 91px;
+                        z-index: 2;
+                        h1{
+                            font-size: 30px;
+                            font-family: "KIAB";
+                            color: rgb(0, 0, 0);
+                            line-height: 2;
+                            text-align: left;   
+                            padding-left: 72px;
+                        }
+                        &-picture{
+                            width: 427px;
+                            height: 185px;
+                            background-image: url(../images/x-line.png);
+                            background-position-x: 90px;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            margin-top: -17px;
+                        }
+                    }
+                    &-pay{
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 54px;
+                        z-index: 2;
+                        article{
+                            position: relative;
+                            width: 43px;
+                            height: 43px;
+                            background-color: rgb(163, 6, 6);
+                            img{
+                                position: absolute;
+                                width: 35px;
+                                height: 35px;
+                                top: 3px;
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto;
+                            }
+                            p{
+                                position: absolute;
+                                width: 100px;
+                                left: 72px;
+                                font-weight: 600;
+                                font-size: 14px;
+                                font-family: "KIAM";
+                                color: rgb(0, 0, 0);
+                                line-height: 1.143;
+                                text-align: left;
+                            }
+                        }
+                        h3{
+                            font-size: 18px;
+                            font-family: "KIAB";
+                            color: rgb(163, 6, 6);
+                            line-height: 1.667;
+                            text-align: left;  
+                            margin-top: 10px;
+                            margin-bottom: 13px;
+                        }
+                        .credit{
+                            width: 218px;
+                            height: 41px;   
+                            border:1px solid rgb(163, 6, 6);
+                            background-color: rgb(255, 255, 255);
+                            font-size: 14px;
+                            font-family: "KIAM";
+                            color: rgb(163, 6, 6);
+                            line-height: 2.143;
+                            text-align: center;
+                            margin-bottom: 9px;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: rgb(163, 6, 6);
+                                color: rgb(255, 255, 255);
+                                border: 1px solid rgb(255, 255, 255);
+                            }
+                        }
+                        .benefit{
+                            width: 220px;
+                            height: 43px;
+                            background-color: rgb(163, 6, 6);
+                            font-size: 14px;
+                            font-family: "KIAM";
+                            color: rgb(255, 255, 255);
+                            text-transform: uppercase;
+                            line-height: 2.143;
+                            text-align: center;
+                            margin-bottom: 8px;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: rgb(51, 51, 51);
+                                color: rgb(255, 255, 255);
+                                border: 1px solid rgb(255, 255, 255);
+                            }
+                        }
+                        .special{
+                            width: 220px;
+                            height: 41px;
+                            background-color: rgb(51, 51, 51);  
+                            font-size: 14px;
+                            font-family: "KIAM";
+                            color: rgb(255, 255, 255);
+                            text-transform: uppercase;
+                            line-height: 2.143;
+                            text-align: center;  
+                            cursor: pointer;  
+                            &:hover{
+                                background-color: rgb(163, 6, 6);
+                                color: rgb(255, 255, 255);
+                                border: 1px solid rgb(255, 255, 255);
+                            }
+                        }
+                    }
+                    &-border{
+                        position: absolute;
+                        width: 338px;
+                        height: 248px;
+                        background-image: url(../icon/Border.png);
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        top: 72px;
+                        left: 29%;
+                    }
+                }
+                &-ceed{
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 50%;
+                    &-container{
+                        margin-top: 91px;
+                        z-index: 2;
+                        h1{
+                            font-size: 30px;
+                            font-family: "KIAB";
+                            color: rgb(0, 0, 0);
+                            line-height: 2;
+                            text-align: left;   
+                            padding-left: 83px;
+                            span{
+                                color: #a30606;
+                            }
+                        }
+                        &-picture{
+                            width: 429px;
+                            height: 230px;
+                            background-image: url(../images/ceed.png);
+                            background-position-x: 39px;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            margin-top: -17px;
+                        }
+                    }
+                    &-pay{
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 54px;
+                        z-index: 2;
+                        article{
+                            position: relative;
+                            width: 43px;
+                            height: 43px;
+                            background-color: rgb(163, 6, 6);
+                            img{
+                                position: absolute;
+                                width: 35px;
+                                height: 35px;
+                                top: 3px;
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto;
+                            }
+                            p{
+                                position: absolute;
+                                width: 100px;
+                                left: 72px;
+                                font-weight: 600;
+                                font-size: 14px;
+                                font-family: "KIAM";
+                                color: rgb(0, 0, 0);
+                                line-height: 1.143;
+                                text-align: left;
+                            }
+                        }
+                        h3{
+                            font-size: 18px;
+                            font-family: "KIAB";
+                            color: rgb(163, 6, 6);
+                            line-height: 1.667;
+                            text-align: left;  
+                            margin-top: 10px;
+                            margin-bottom: 13px;
+                        }
+                        .credit{
+                            width: 218px;
+                            height: 41px;   
+                            border:1px solid rgb(163, 6, 6);
+                            background-color: rgb(255, 255, 255);
+                            font-size: 14px;
+                            font-family: "KIAM";
+                            color: rgb(163, 6, 6);
+                            line-height: 2.143;
+                            text-align: center;
+                            margin-bottom: 9px;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: rgb(163, 6, 6);
+                                color: rgb(255, 255, 255);
+                                border: 1px solid rgb(255, 255, 255);
+                            }
+                        }
+                        .benefit{
+                            width: 220px;
+                            height: 43px;
+                            background-color: rgb(163, 6, 6);
+                            font-size: 14px;
+                            font-family: "KIAM";
+                            color: rgb(255, 255, 255);
+                            text-transform: uppercase;
+                            line-height: 2.143;
+                            text-align: center;
+                            margin-bottom: 8px;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: rgb(51, 51, 51);
+                                color: rgb(255, 255, 255);
+                                border: 1px solid rgb(255, 255, 255);
+                            }
+                        }
+                        .special{
+                            width: 220px;
+                            height: 41px;
+                            background-color: rgb(51, 51, 51);  
+                            font-size: 14px;
+                            font-family: "KIAM";
+                            color: rgb(255, 255, 255);
+                            text-transform: uppercase;
+                            line-height: 2.143;
+                            text-align: center;  
+                            cursor: pointer;  
+                            &:hover{
+                                background-color: rgb(163, 6, 6);
+                                color: rgb(255, 255, 255);
+                                border: 1px solid rgb(255, 255, 255);
+                            }
+                        }
+                    }
+                    &-border{
+                        position: absolute;
+                        width: 338px;
+                        height: 248px;
+                        background-image: url(../icon/Border.png);
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        top: 72px;
+                        left: 29%;
+                    }
+                }
+            }
+            @media (max-width: 1024px) {
+                &{
+                    display: flex;
+                    &-box{
+                        flex-direction: column;
+                    }
+                }
+            }
+            @media (max-width: 768px) {
+                &{
+                    &-box{
+                        flex-direction: column;
+                    }
+                }
+            }
+            @media (max-width: 414px) {
+                &{
+                    &-box{
+                        flex-direction: column;
+                        overflow: hidden;
+                        &-rio{
+                            flex-direction: column;
+                            width: 100%;
+                            &-container{
+                                margin-top: 30px;
+                                h1{
+                                    padding-left: 15px;
+                                }
+                                &-picture{
+                                    width: 100%;
+                                    background-position-x: 30px;
+                                }
+                            }
+                            &-pay{
+                                padding-left: 20%;
+                                padding-right: 20%;
+                            }
+                            &-border{
+                                width: 100%;
+                                height: 210px;
+                                top: 10%;
+                                left: 20%;
+                            }
+                        }
+                        &-ceed{
+                            flex-direction: column;
+                            width: 100%;
+                            &-container{
+                                margin-top: 30px;
+                                h1{
+                                    padding-left: 15px;
+                                }
+                                &-picture{
+                                    height: 210px;
+                                    background-position-x: 0;
+                                }
+                            }
+                            &-pay{
+                                padding-left: 20%;
+                                padding-right: 20%;
+                                margin-top: 0;
+                            }
+                            &-border{
+                                width: 100%;
+                                height: 210px;
+                                top: 10%;
+                                left: 20%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .popup{
+        position: fixed;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(9, 16, 26, 0.61);
+        z-index: 9999999999;
+        &-content{
+            position: relative;
+            width: 425px;
+            height: 318px;
+            background-color: rgb(255, 255, 255);
+            h2{
+                font-size: 24px;
+                font-weight: 600;
+                font-family: "KIAB";
+                color: rgb(0, 0, 0);
+                line-height: 2;
+                text-align: center;   
+                padding-top: 62px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 27px;
+                input{
+                    width: 293px;
+                    height: 48px;
+                    background-color: rgb(255, 255, 255);
+                    border: 1px solid rgb(181, 181, 181); 
+                    font-size: 14px;
+                    font-family: "KIAM";
+                    color: rgb(141, 141, 141);
+                    line-height: 2.571;
+                    text-align: center;  
+                    margin-bottom: 9px;  
+                    outline: none; 
+                }
+                button{
+                    width: 295px;
+                    height: 50px;
+                    background-color: rgb(163, 6, 6);  
+                    font-size: 14px;
+                    font-family: "KIAM";
+                    color: rgb(255, 255, 255);
+                    text-transform: uppercase;
+                    line-height: 2.571;
+                    text-align: center;
+                    margin-bottom: 9px;  
+                    outline: none;
+                    cursor: pointer;    
+                }
+                p{
+                    font-size: 10px;
+                    font-family: "KIAM";
+                    color: rgb(216, 216, 216);
+                    line-height: 1.1;
+                    text-align: center;
+                    padding-left: 93px;
+                    padding-right: 93px;
+                    box-sizing: border-box;     
+                }
+            }
+            &-cansel{
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background: url(../icon/cansel.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                top: 14px;
+                right: 16px;
+                cursor: pointer;
+            }
+            @media (max-width: 414px) {
+                &{
+                    width: 100%;
+                    height: 330px;
+                }
+            }
+        }
+    }
+    footer{
+        .map{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-box{
+                width: 944px;
+            }
+            &-contact{
+                position: absolute;
+                width: 630px;
+                height: 313px;
+                background-color: #a30606;
+                right: 0;
+                &-container{
+                    padding: 20px 24px;
+                    box-sizing: border-box;
+                    h1{
+                        font-size: 24px;
+                        font-family: "KIAM";
+                        color: rgb(255, 255, 255);
+                        text-transform: uppercase;
+                        line-height: 0.833;
+                        margin-bottom: 17px;
+                    }
+                    p{
+                        font-size: 16px;
+                        font-family: "KIAM";
+                        color: rgb(255, 255, 255); 
+                        margin-bottom: 14px; 
+                    }
+                    a{
+                        font-size: 16px;
+                        font-family: "KIAM";
+                        color: rgb(255, 255, 255);
+                        text-decoration: none;
+                        margin-bottom: 22px; 
+                    }
+                    form{
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 33px;
+                        input{
+                            width: 290px;
+                            height: 43px;
+                            border: 1px solid rgb(255, 255, 255);
+                            font-size: 14px;
+                            font-family: "KIAM";
+                            color: rgb(255, 147, 147);
+                            background-color: #a30606;
+                            line-height: 1.429;
+                            margin-bottom: 5px; 
+                            padding: 10px 10px;
+                            box-sizing: border-box;
+                            outline: none;
+                            &::placeholder{
+                                color: rgb(255, 147, 147);
+                            }
+                        }
+                        button{
+                            width: 290px;
+                            height: 43px;
+                            font-size: 16px;
+                            font-family: "KIAB";
+                            color: rgb(163, 6, 6);
+                            text-transform: uppercase;
+                            line-height: 1.25; 
+                            background-color: rgb(255, 255, 255);
+                            cursor: pointer;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 1024px) {
+                &{
+                    &-contact{
+                        width: 330px;
+                        &-container{
+                            form{
+                                input{
+                                    width: 100%;
+                                }
+                                button{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 768px) {
+                &{
+                    &-contact{
+                        width: 330px;
+                        &-container{
+                            form{
+                                input{
+                                    width: 100%;
+                                }
+                                button{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 568px) {
+                &{
+                    &-contact{
+                        width: 330px;
+                        left: 56%;
+                    }
+                }
+            }
+            @media (max-width: 414px) {
+                &{
+                    &-contact{
+                        width: 100%;
+                        top: 99%;
+                        left: 0;
+                        &-container{
+                            form{
+                                input{
+                                    width: 100%;
+                                }
+                                button{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

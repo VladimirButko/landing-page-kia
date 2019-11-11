@@ -1,0 +1,1790 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body main .info {
+  position: relative;
+  max-width: 1600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .info-left {
+  width: 50%;
+  height: 770px;
+  background-color: #a30606;
+}
+
+body main .info-left-header {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .info-left-header .logo-avtoholding {
+  display: inline-block;
+  width: 130px;
+  height: 50px;
+  background: url(../icon/logo_avtoholding.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 121px;
+}
+
+body main .info-left-header .address {
+  position: relative;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: white;
+  line-height: 1.143;
+  margin-right: 30px;
+  padding-top: 10px;
+}
+
+body main .info-left-header .address::before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 26px;
+  background: url(../icon/.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 10px;
+  left: -30px;
+}
+
+body main .info-left-header nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 400px;
+  top: 70px;
+  right: -100%;
+  z-index: 888;
+  background-color: rgba(9, 16, 26, 0.61);
+  -webkit-transition: 1.5s all;
+  transition: 1.5s all;
+}
+
+body main .info-left-header nav a {
+  font-size: 16px;
+  font-family: "KIAB";
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 414px) {
+  body main .info-left-header nav.active {
+    right: 0;
+  }
+}
+
+body main .info-left-header .burger {
+  position: relative;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 44px;
+  height: 34px;
+  right: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body main .info-left-header .burger::before {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 1px;
+  background-color: white;
+  top: 9px;
+}
+
+body main .info-left-header .burger::after {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 1px;
+  background-color: white;
+  bottom: 9px;
+}
+
+body main .info-left-header .burger-line {
+  width: 22px;
+  height: 1px;
+  background-color: white;
+}
+
+body main .info-left-header .burger.active::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  width: 25px;
+  top: 17px;
+}
+
+body main .info-left-header .burger.active::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  width: 25px;
+  bottom: 15px;
+}
+
+body main .info-left-header .burger.active .burger-line {
+  opacity: 0;
+}
+
+body main .info-left-box {
+  position: absolute;
+  width: 470px;
+  top: 200px;
+  margin: 0 auto;
+  left: 15%;
+  z-index: 1;
+}
+
+body main .info-left-box p {
+  font-size: 30px;
+  font-family: "KIAB";
+  color: white;
+  line-height: 1.5;
+  text-align: left;
+  top: 227.8px;
+  z-index: 62;
+}
+
+body main .info-left-box p span {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+body main .info-left-box button {
+  width: 282px;
+  height: 62px;
+  font-size: 18px;
+  font-family: "KIAB";
+  color: #a30606;
+  background-color: white;
+  text-transform: uppercase;
+  line-height: 3.333;
+  text-align: center;
+  margin-top: 40px;
+  outline: none;
+  cursor: pointer;
+}
+
+body main .info-left-box button:hover {
+  background-color: #a30606;
+  color: white;
+}
+
+body main .info-left-car {
+  position: absolute;
+  top: 68%;
+  left: 15%;
+}
+
+body main .info-left-car h2 {
+  font-size: 24px;
+  font-family: "KIAB";
+  color: #fefefe;
+  line-height: 1.5;
+}
+
+body main .info-left-car-box {
+  width: 380px;
+  padding-top: 40px;
+}
+
+body main .info-left-car-box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .info-left-car-box-container ul li {
+  list-style: none;
+}
+
+body main .info-left-car-box-container ul li a {
+  font-size: 16px;
+  font-family: "KIAM";
+  color: white;
+  line-height: 1.875;
+  text-align: left;
+  text-decoration: none;
+}
+
+body main .info-left-car-box-container ul li a:hover {
+  color: #ca7777;
+}
+
+body main .info-right {
+  width: 50%;
+  height: 770px;
+  background-color: white;
+}
+
+body main .info-right-header {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .info-right-header button {
+  background-color: #a30606;
+  width: 219px;
+  height: 54px;
+  font-size: 16px;
+  font-family: "KIAB";
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  line-height: 3.75;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+body main .info-right-header button:hover {
+  background-color: white;
+  color: #3d3d3d;
+}
+
+body main .info-right-header .logo-kia {
+  display: inline-block;
+  width: 130px;
+  height: 50px;
+  background: url(../icon/logo_kia.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body main .info-right-discount {
+  padding-top: 68%;
+  padding-left: 27px;
+}
+
+body main .info-right-discount h1 {
+  font-size: 48px;
+  font-family: "KIAB";
+  color: black;
+  line-height: 0.75;
+  text-align: left;
+}
+
+body main .info-right-discount p {
+  font-size: 20px;
+  font-family: "KIAB";
+  line-height: 2;
+  font-weight: 600;
+}
+
+body main .info-right-discount form {
+  margin-top: 32px;
+}
+
+body main .info-right-discount form input {
+  border-width: 1px;
+  border-color: #d0d0d0;
+  border-style: solid;
+  background-color: white;
+  width: 295px;
+  height: 47px;
+  font-size: 16px;
+  font-family: "KIAM";
+  color: #939393;
+  line-height: 1.875;
+  text-align: left;
+  padding: 0 0 0 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+body main .info-right-discount form .sub-discount {
+  background-color: #a30606;
+  height: 50px;
+  font-size: 16px;
+  font-family: "KIAM";
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.875;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+body main .info-picture {
+  position: absolute;
+  width: 1037px;
+  height: 420px;
+  background: url(../images/Rectangle.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 17%;
+  right: 0%;
+}
+
+@media (max-width: 1366px) {
+  body main .info-right-discount {
+    padding-top: 79%;
+  }
+  body main .info-right-discount p {
+    font-size: 17px;
+  }
+  body main .info-right-discount form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body main .info-right-discount form input {
+    width: 200px;
+  }
+  body main .info-picture {
+    width: 825px;
+  }
+}
+
+@media (max-width: 1024px) {
+  body main .info-left-box {
+    left: 10%;
+  }
+  body main .info-left-car {
+    left: 10%;
+  }
+  body main .info-right {
+    height: auto;
+  }
+  body main .info-right-discount {
+    padding-top: 88%;
+  }
+  body main .info-right-discount p {
+    font-size: 17px;
+  }
+  body main .info-right-discount form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body main .info-right-discount form input {
+    width: 200px;
+  }
+  body main .info-picture {
+    width: 520px;
+    top: 12%;
+  }
+}
+
+@media (max-width: 823px) {
+  body main .info-left-box {
+    width: 435px;
+    left: 2%;
+  }
+  body main .info-left-box p span {
+    font-size: 35px;
+  }
+  body main .info-left-box button {
+    margin-top: 70px;
+  }
+  body main .info-left-car {
+    left: 2%;
+  }
+  body main .info-left-car-box-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body main .info-right-discount {
+    padding-top: 100%;
+    padding-left: 15px;
+  }
+  body main .info-right-discount h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  body main .info-right-discount p {
+    font-size: 14px;
+  }
+  body main .info-right-discount form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .info-right-discount form input {
+    width: 100%;
+  }
+  body main .info-picture {
+    width: 465px;
+    top: 10%;
+  }
+}
+
+@media (max-width: 812px) {
+  body main .info-left-box {
+    left: 2%;
+  }
+  body main .info-left-box button {
+    margin-top: 70px;
+  }
+  body main .info-left-car {
+    left: 2%;
+  }
+  body main .info-left-car-box-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body main .info-right-discount {
+    padding-top: 100%;
+    padding-left: 15px;
+  }
+  body main .info-right-discount h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  body main .info-right-discount p {
+    font-size: 14px;
+  }
+  body main .info-right-discount form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body main .info-right-discount form input {
+    width: 100%;
+  }
+  body main .info-picture {
+    width: 465px;
+    top: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  body main .info-left-box {
+    left: 2%;
+  }
+  body main .info-left-box button {
+    margin-top: 70px;
+  }
+  body main .info-left-car {
+    left: 2%;
+  }
+  body main .info-left-car-box-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body main .info-right-discount {
+    padding-top: 100%;
+    padding-left: 15px;
+  }
+  body main .info-right-discount h1 {
+    font-size: 38px;
+  }
+  body main .info-right-discount p {
+    font-size: 18px;
+  }
+  body main .info-right-discount form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body main .info-right-discount form input {
+    width: 100%;
+  }
+  body main .info-picture {
+    width: 475px;
+    top: 10%;
+  }
+}
+
+@media (max-width: 736px) {
+  body main .info-left-box {
+    left: 2%;
+  }
+  body main .info-left-box button {
+    margin-top: 70px;
+  }
+  body main .info-left-car {
+    left: 2%;
+  }
+  body main .info-left-car-box {
+    width: 360px;
+  }
+  body main .info-picture {
+    width: 395px;
+    top: 10%;
+  }
+}
+
+@media (max-width: 667px) {
+  body main .info-left-box {
+    width: 365px;
+    top: 150px;
+    left: 2%;
+  }
+  body main .info-left-box p {
+    font-size: 20px;
+  }
+  body main .info-left-box p span {
+    font-size: 30px;
+  }
+  body main .info-left-box button {
+    margin-top: 70px;
+  }
+  body main .info-left-car {
+    top: 60%;
+    left: 2%;
+  }
+  body main .info-left-car-box {
+    width: 330px;
+  }
+  body main .info-right-discount h1 {
+    font-size: 36px;
+  }
+  body main .info-right-discount p {
+    font-size: 11px;
+  }
+  body main .info-right-discount form input {
+    width: 250px;
+    margin-bottom: 15px;
+  }
+  body main .info-picture {
+    width: 395px;
+    top: 2%;
+  }
+}
+
+@media (max-width: 568px) {
+  body main .info-left {
+    height: auto;
+  }
+  body main .info-left-header .logo-avtoholding {
+    margin-right: 40px;
+  }
+  body main .info-left-header .address {
+    margin-right: 0;
+  }
+  body main .info-left-box {
+    width: 300px;
+    top: 135px;
+  }
+  body main .info-left-box p span {
+    font-size: 25px;
+  }
+  body main .info-left-box button {
+    width: 230px;
+  }
+  body main .info-left-car {
+    top: 54%;
+  }
+  body main .info-left-car-box {
+    width: 268px;
+  }
+  body main .info-left-car-box-container ul li a {
+    font-size: 13px;
+  }
+  body main .info-right {
+    height: auto;
+  }
+  body main .info-right-discount h1 {
+    font-size: 31px;
+  }
+  body main .info-right-discount p {
+    font-size: 9px;
+  }
+  body main .info-picture {
+    width: 325px;
+    top: 0;
+  }
+}
+
+@media (max-width: 414px) {
+  body main .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .info-left {
+    width: 100%;
+    height: 770px;
+  }
+  body main .info-left-header .logo-avtoholding {
+    margin-right: inherit;
+  }
+  body main .info-left-header .address {
+    margin-right: inherit;
+  }
+  body main .info-left-header .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 5;
+  }
+  body main .info-left-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 89%;
+    top: 300px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  body main .info-left-box p {
+    text-align: center;
+  }
+  body main .info-left-box p span {
+    font-size: 30px;
+  }
+  body main .info-left-box button {
+    margin-top: 50px;
+  }
+  body main .info-left-car {
+    top: 47%;
+    text-align: center;
+    left: 0;
+  }
+  body main .info-left-car-box {
+    width: 375px;
+    padding-top: 10px;
+  }
+  body main .info-left-car-box-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: left;
+  }
+  body main .info-right {
+    width: 100%;
+  }
+  body main .info-right-discount {
+    padding-top: 30%;
+    padding-left: 0;
+  }
+  body main .info-right-discount h1 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  body main .info-right-discount p {
+    text-align: center;
+    font-size: 13px;
+  }
+  body main .info-right-discount form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .info-right-discount form input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body main .info-picture {
+    width: 100%;
+    top: 0;
+  }
+}
+
+@media (max-width: 411px) {
+  body main .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .info-left {
+    width: 100%;
+  }
+  body main .info-left-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 89%;
+    top: 300px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  body main .info-left-box p {
+    text-align: center;
+  }
+  body main .info-left-box p span {
+    font-size: 30px;
+  }
+  body main .info-left-box button {
+    margin-top: 50px;
+  }
+  body main .info-left-car {
+    top: 47%;
+    text-align: center;
+    left: 0;
+  }
+  body main .info-left-car-box {
+    width: 375px;
+    padding-top: 10px;
+  }
+  body main .info-left-car-box-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: left;
+  }
+  body main .info-right {
+    width: 100%;
+  }
+  body main .info-right-discount {
+    padding-top: 30%;
+    padding-left: 0;
+  }
+  body main .info-right-discount h1 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  body main .info-right-discount p {
+    text-align: center;
+    font-size: 13px;
+  }
+  body main .info-right-discount form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .info-right-discount form input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body main .info-picture {
+    width: 100%;
+    top: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  body main .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .info-left {
+    width: 100%;
+  }
+  body main .info-left-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 98%;
+    top: 300px;
+    left: 0;
+  }
+  body main .info-left-box p {
+    text-align: center;
+  }
+  body main .info-left-box p span {
+    font-size: 30px;
+  }
+  body main .info-left-box button {
+    margin-top: 70px;
+  }
+  body main .info-left-car {
+    top: 47%;
+    text-align: center;
+    left: 0;
+  }
+  body main .info-left-car-box {
+    width: 375px;
+    padding-top: 10px;
+  }
+  body main .info-left-car-box-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: left;
+  }
+  body main .info-right {
+    width: 100%;
+  }
+  body main .info-right-discount {
+    padding-top: 30%;
+    padding-left: 0;
+  }
+  body main .info-right-discount h1 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  body main .info-right-discount p {
+    text-align: center;
+    font-size: 13px;
+  }
+  body main .info-right-discount form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .info-right-discount form input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body main .info-picture {
+    width: 100%;
+    top: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  body main .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .info-left {
+    width: 100%;
+  }
+  body main .info-left-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    top: 285px;
+    left: 0;
+  }
+  body main .info-left-box p span {
+    font-size: 30px;
+  }
+  body main .info-left-box button {
+    margin-top: 30px;
+  }
+  body main .info-left-car {
+    top: 48%;
+    text-align: center;
+    left: 0;
+  }
+  body main .info-left-car-box {
+    width: 360px;
+    padding-top: 10px;
+  }
+  body main .info-left-car-box-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: left;
+  }
+  body main .info-right {
+    width: 100%;
+  }
+  body main .info-right-discount {
+    padding-top: 30%;
+    padding-left: 0;
+  }
+  body main .info-right-discount h1 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  body main .info-right-discount p {
+    text-align: center;
+    font-size: 13px;
+  }
+  body main .info-right-discount form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .info-right-discount form input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media (max-width: 320px) {
+  body main .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .info-left {
+    width: 100%;
+  }
+  body main .info-left-header .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30px;
+    height: 31px;
+    z-index: 5;
+  }
+  body main .info-left-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    top: 285px;
+    left: 0;
+  }
+  body main .info-left-box p span {
+    font-size: 27px;
+  }
+  body main .info-left-box button {
+    margin-top: 30px;
+  }
+  body main .info-left-car {
+    top: 48%;
+    text-align: center;
+    left: 0;
+  }
+  body main .info-left-car-box {
+    width: 320px;
+    padding-top: 10px;
+  }
+  body main .info-left-car-box-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    text-align: left;
+  }
+  body main .info-right {
+    width: 100%;
+  }
+  body main .info-right-discount {
+    padding-top: 30%;
+    padding-left: 0;
+  }
+  body main .info-right-discount h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  body main .info-right-discount p {
+    text-align: center;
+    font-size: 15px;
+  }
+  body main .info-right-discount form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main .info-right-discount form input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body main .info-picture {
+    width: 100%;
+    top: 0;
+  }
+}
+
+body section .car-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body section .car-box-rio {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+}
+
+body section .car-box-rio-container {
+  margin-top: 91px;
+  z-index: 2;
+}
+
+body section .car-box-rio-container h1 {
+  font-size: 30px;
+  font-family: "KIAB";
+  color: black;
+  line-height: 2;
+  text-align: left;
+  padding-left: 72px;
+}
+
+body section .car-box-rio-container-picture {
+  width: 427px;
+  height: 185px;
+  background-image: url(../images/x-line.png);
+  background-position-x: 90px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: -17px;
+}
+
+body section .car-box-rio-pay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 54px;
+  z-index: 2;
+}
+
+body section .car-box-rio-pay article {
+  position: relative;
+  width: 43px;
+  height: 43px;
+  background-color: #a30606;
+}
+
+body section .car-box-rio-pay article img {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 3px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+body section .car-box-rio-pay article p {
+  position: absolute;
+  width: 100px;
+  left: 72px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: black;
+  line-height: 1.143;
+  text-align: left;
+}
+
+body section .car-box-rio-pay h3 {
+  font-size: 18px;
+  font-family: "KIAB";
+  color: #a30606;
+  line-height: 1.667;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+
+body section .car-box-rio-pay .credit {
+  width: 218px;
+  height: 41px;
+  border: 1px solid #a30606;
+  background-color: white;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: #a30606;
+  line-height: 2.143;
+  text-align: center;
+  margin-bottom: 9px;
+  cursor: pointer;
+}
+
+body section .car-box-rio-pay .credit:hover {
+  background-color: #a30606;
+  color: white;
+  border: 1px solid white;
+}
+
+body section .car-box-rio-pay .benefit {
+  width: 220px;
+  height: 43px;
+  background-color: #a30606;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: white;
+  text-transform: uppercase;
+  line-height: 2.143;
+  text-align: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+body section .car-box-rio-pay .benefit:hover {
+  background-color: #333333;
+  color: white;
+  border: 1px solid white;
+}
+
+body section .car-box-rio-pay .special {
+  width: 220px;
+  height: 41px;
+  background-color: #333333;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: white;
+  text-transform: uppercase;
+  line-height: 2.143;
+  text-align: center;
+  cursor: pointer;
+}
+
+body section .car-box-rio-pay .special:hover {
+  background-color: #a30606;
+  color: white;
+  border: 1px solid white;
+}
+
+body section .car-box-rio-border {
+  position: absolute;
+  width: 338px;
+  height: 248px;
+  background-image: url(../icon/Border.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 72px;
+  left: 29%;
+}
+
+body section .car-box-ceed {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+}
+
+body section .car-box-ceed-container {
+  margin-top: 91px;
+  z-index: 2;
+}
+
+body section .car-box-ceed-container h1 {
+  font-size: 30px;
+  font-family: "KIAB";
+  color: black;
+  line-height: 2;
+  text-align: left;
+  padding-left: 83px;
+}
+
+body section .car-box-ceed-container h1 span {
+  color: #a30606;
+}
+
+body section .car-box-ceed-container-picture {
+  width: 429px;
+  height: 230px;
+  background-image: url(../images/ceed.png);
+  background-position-x: 39px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: -17px;
+}
+
+body section .car-box-ceed-pay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 54px;
+  z-index: 2;
+}
+
+body section .car-box-ceed-pay article {
+  position: relative;
+  width: 43px;
+  height: 43px;
+  background-color: #a30606;
+}
+
+body section .car-box-ceed-pay article img {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 3px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+body section .car-box-ceed-pay article p {
+  position: absolute;
+  width: 100px;
+  left: 72px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: black;
+  line-height: 1.143;
+  text-align: left;
+}
+
+body section .car-box-ceed-pay h3 {
+  font-size: 18px;
+  font-family: "KIAB";
+  color: #a30606;
+  line-height: 1.667;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+
+body section .car-box-ceed-pay .credit {
+  width: 218px;
+  height: 41px;
+  border: 1px solid #a30606;
+  background-color: white;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: #a30606;
+  line-height: 2.143;
+  text-align: center;
+  margin-bottom: 9px;
+  cursor: pointer;
+}
+
+body section .car-box-ceed-pay .credit:hover {
+  background-color: #a30606;
+  color: white;
+  border: 1px solid white;
+}
+
+body section .car-box-ceed-pay .benefit {
+  width: 220px;
+  height: 43px;
+  background-color: #a30606;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: white;
+  text-transform: uppercase;
+  line-height: 2.143;
+  text-align: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+body section .car-box-ceed-pay .benefit:hover {
+  background-color: #333333;
+  color: white;
+  border: 1px solid white;
+}
+
+body section .car-box-ceed-pay .special {
+  width: 220px;
+  height: 41px;
+  background-color: #333333;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: white;
+  text-transform: uppercase;
+  line-height: 2.143;
+  text-align: center;
+  cursor: pointer;
+}
+
+body section .car-box-ceed-pay .special:hover {
+  background-color: #a30606;
+  color: white;
+  border: 1px solid white;
+}
+
+body section .car-box-ceed-border {
+  position: absolute;
+  width: 338px;
+  height: 248px;
+  background-image: url(../icon/Border.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 72px;
+  left: 29%;
+}
+
+@media (max-width: 1024px) {
+  body section .car {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body section .car-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  body section .car-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 414px) {
+  body section .car-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+  }
+  body section .car-box-rio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  body section .car-box-rio-container {
+    margin-top: 30px;
+  }
+  body section .car-box-rio-container h1 {
+    padding-left: 15px;
+  }
+  body section .car-box-rio-container-picture {
+    width: 100%;
+    background-position-x: 30px;
+  }
+  body section .car-box-rio-pay {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  body section .car-box-rio-border {
+    width: 100%;
+    height: 210px;
+    top: 10%;
+    left: 20%;
+  }
+  body section .car-box-ceed {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  body section .car-box-ceed-container {
+    margin-top: 30px;
+  }
+  body section .car-box-ceed-container h1 {
+    padding-left: 15px;
+  }
+  body section .car-box-ceed-container-picture {
+    height: 210px;
+    background-position-x: 0;
+  }
+  body section .car-box-ceed-pay {
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-top: 0;
+  }
+  body section .car-box-ceed-border {
+    width: 100%;
+    height: 210px;
+    top: 10%;
+    left: 20%;
+  }
+}
+
+body .popup {
+  position: fixed;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(9, 16, 26, 0.61);
+  z-index: 9999999999;
+}
+
+body .popup-content {
+  position: relative;
+  width: 425px;
+  height: 318px;
+  background-color: white;
+}
+
+body .popup-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "KIAB";
+  color: black;
+  line-height: 2;
+  text-align: center;
+  padding-top: 62px;
+}
+
+body .popup-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 27px;
+}
+
+body .popup-content form input {
+  width: 293px;
+  height: 48px;
+  background-color: white;
+  border: 1px solid #b5b5b5;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: #8d8d8d;
+  line-height: 2.571;
+  text-align: center;
+  margin-bottom: 9px;
+  outline: none;
+}
+
+body .popup-content form button {
+  width: 295px;
+  height: 50px;
+  background-color: #a30606;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: white;
+  text-transform: uppercase;
+  line-height: 2.571;
+  text-align: center;
+  margin-bottom: 9px;
+  outline: none;
+  cursor: pointer;
+}
+
+body .popup-content form p {
+  font-size: 10px;
+  font-family: "KIAM";
+  color: #d8d8d8;
+  line-height: 1.1;
+  text-align: center;
+  padding-left: 93px;
+  padding-right: 93px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .popup-content-cansel {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(../icon/cansel.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 14px;
+  right: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 414px) {
+  body .popup-content {
+    width: 100%;
+    height: 330px;
+  }
+}
+
+body footer .map {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body footer .map-box {
+  width: 944px;
+}
+
+body footer .map-contact {
+  position: absolute;
+  width: 630px;
+  height: 313px;
+  background-color: #a30606;
+  right: 0;
+}
+
+body footer .map-contact-container {
+  padding: 20px 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body footer .map-contact-container h1 {
+  font-size: 24px;
+  font-family: "KIAM";
+  color: white;
+  text-transform: uppercase;
+  line-height: 0.833;
+  margin-bottom: 17px;
+}
+
+body footer .map-contact-container p {
+  font-size: 16px;
+  font-family: "KIAM";
+  color: white;
+  margin-bottom: 14px;
+}
+
+body footer .map-contact-container a {
+  font-size: 16px;
+  font-family: "KIAM";
+  color: white;
+  text-decoration: none;
+  margin-bottom: 22px;
+}
+
+body footer .map-contact-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 33px;
+}
+
+body footer .map-contact-container form input {
+  width: 290px;
+  height: 43px;
+  border: 1px solid white;
+  font-size: 14px;
+  font-family: "KIAM";
+  color: #ff9393;
+  background-color: #a30606;
+  line-height: 1.429;
+  margin-bottom: 5px;
+  padding: 10px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+body footer .map-contact-container form input::-webkit-input-placeholder {
+  color: #ff9393;
+}
+
+body footer .map-contact-container form input:-ms-input-placeholder {
+  color: #ff9393;
+}
+
+body footer .map-contact-container form input::-ms-input-placeholder {
+  color: #ff9393;
+}
+
+body footer .map-contact-container form input::placeholder {
+  color: #ff9393;
+}
+
+body footer .map-contact-container form button {
+  width: 290px;
+  height: 43px;
+  font-size: 16px;
+  font-family: "KIAB";
+  color: #a30606;
+  text-transform: uppercase;
+  line-height: 1.25;
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 1024px) {
+  body footer .map-contact {
+    width: 330px;
+  }
+  body footer .map-contact-container form input {
+    width: 100%;
+  }
+  body footer .map-contact-container form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body footer .map-contact {
+    width: 330px;
+  }
+  body footer .map-contact-container form input {
+    width: 100%;
+  }
+  body footer .map-contact-container form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 568px) {
+  body footer .map-contact {
+    width: 330px;
+    left: 56%;
+  }
+}
+
+@media (max-width: 414px) {
+  body footer .map-contact {
+    width: 100%;
+    top: 99%;
+    left: 0;
+  }
+  body footer .map-contact-container form input {
+    width: 100%;
+  }
+  body footer .map-contact-container form button {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
